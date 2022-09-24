@@ -5,6 +5,9 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <header>
+        <a href="{% url 'home' %}">Home</a> | <a href="{% url 'login' %}">Login</a>
+    </header>
   <main>
     {% block content %}
     {% endblock %}

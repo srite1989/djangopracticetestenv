@@ -1,8 +1,4 @@
 {% extends 'base.html' %}
-
-{% block content %}
-
-
 {% if error %}
 {{ error }}
 
@@ -16,12 +12,13 @@
     </head>
     {%block content%}
     <body>
+        <form method="POST",action="signin\"></form>
         <div class="container">
             <div class="jumbotron">
               <label for="user">Username</label>
                 <input id="user" type="text" placeholder="Enter username" name="uname">
-              <label for="user">Password</label>
-               <input id="user" type="password" placeholder="Enter password" name="upass">
+              <label for="pwd">Password</label>
+               <input id="pwd" type="password" placeholder="Enter password" name="upass">
                <button class="btn btn-primary btn-lg" type="submit">Login</button>
             </div>
 
