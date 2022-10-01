@@ -12,7 +12,8 @@
     </head>
     {%block content%}
     <body>
-        <form method="POST",action="signin\"></form>
+        <form method="POST" action="/signin/">
+            {% csrf_token %}
         <div class="container">
             <div class="jumbotron">
               <label for="user">Username</label>
@@ -24,6 +25,7 @@
 
         </div>
         {{user}}
+        </form>
     </body>
     {%endblock%}
 </html>

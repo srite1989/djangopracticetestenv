@@ -27,7 +27,14 @@ SECRET_KEY = 'django-insecure-%rcqufror^yq58qma6+v5u3u*8c_f3iogdowolve2utznb220s
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+TWILIO_NUMBER = os.getenv("TWILIO_NUMBER")
+SMS_BROADCAST_TO_NUMBERS = [ 
+    "+1 5084717786", # use the format +19735551234
+    #"+91 99122 94975", 
+    #"+91 92927 05345", 
+]
 
 # Application definition
 
@@ -130,4 +137,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL='djangoapp.LoginUser'
+#AUTH_USER_MODEL='djangoapp.LoginUser'
